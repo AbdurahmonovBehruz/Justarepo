@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, interactive-widget=resizes-content">
-  <title>Chat | Camilla</title>
+  <title>Chat | Kamila</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -294,7 +294,7 @@
   </div>
 
   <script>
-    if (localStorage.getItem('camillaChatVisited')) {
+    if (localStorage.getItem('KamilaChatVisited')) {
       document.getElementById('splashFirst').style.display = 'none';
     } else {
       document.getElementById('splashRegular').style.display = 'none';
@@ -387,7 +387,7 @@
     const btnSplashRegular = document.getElementById('btnSplashRegular');
 
     btnSplashFirst.addEventListener('click', () => {
-      localStorage.setItem('camillaChatVisited', 'true');
+      localStorage.setItem('KamilaChatVisited', 'true');
       splashFirst.classList.add('slide-up'); 
       setTimeout(() => {
         splashFirst.style.display = 'none';
@@ -401,7 +401,7 @@
       }, 600);
     });
 
-    const CURRENT_USER = "Camilla";
+    const CURRENT_USER = "Kamila";
     const OTHER_USER = "Behruz";
 
     const firebaseConfig = {
@@ -519,7 +519,7 @@
     themeToggle.addEventListener('click', () => setTheme(!document.documentElement.classList.contains('dark')));
 
     const translations = {
-      en: { header: `Chat with ${OTHER_USER}`, infoTitle: "Information", infoText: "This site is a personal chat. Created to connect Behruz and Camilla.", phMsg: "Type a message...", langName: "English", flag: "🇬🇧", editTitle: "Edit Message", btnCancel: "Cancel", btnSave: "Save", delTitle: "Delete message?", delDesc: "This cannot be undone.", btnDel: "Delete" },
+      en: { header: `Chat with ${OTHER_USER}`, infoTitle: "Information", infoText: "This site is a personal chat. Created to connect Behruz and Kamila.", phMsg: "Type a message...", langName: "English", flag: "🇬🇧", editTitle: "Edit Message", btnCancel: "Cancel", btnSave: "Save", delTitle: "Delete message?", delDesc: "This cannot be undone.", btnDel: "Delete" },
       ru: { header: `Чат с ${OTHER_USER}`, infoTitle: "Информация", infoText: "Этот сайт - личный чат. Создан чтобы связывать Бехруза и Камилу.", phMsg: "Введите сообщение...", langName: "Русский", flag: "🇷🇺", editTitle: "Редактировать сообщение", btnCancel: "Отмена", btnSave: "Сохранить", delTitle: "Удалить сообщение?", delDesc: "Это действие нельзя отменить.", btnDel: "Удалить" },
       uz: { header: `${OTHER_USER} bilan chat`, infoTitle: "Ma'lumot", infoText: "Ushbu sayt - shaxsiy chat. Behruz va Kamillani bog'lash uchun yaratilgan.", phMsg: "Xabar yozing...", langName: "O'zbekcha", flag: "🇺🇿", editTitle: "Xabarni tahrirlash", btnCancel: "Bekor qilish", btnSave: "Saqlash", delTitle: "Xabarni o'chirish?", delDesc: "Buni qaytarib bo'lmaydi.", btnDel: "O'chirish" }
     };
